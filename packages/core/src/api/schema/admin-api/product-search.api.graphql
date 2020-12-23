@@ -1,0 +1,13 @@
+type Query {
+    search(input: SearchInput!): SearchResponse!
+}
+
+type Mutation {
+    reindex: Job!
+}
+
+type SearchResult {
+    enabled: Boolean!
+    "An array of ids of the Collections in which this result appears"
+    channelIds: [ID!]!
+}
